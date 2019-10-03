@@ -1,102 +1,62 @@
-% Du markdown au beamer
-% Romain Vimont (®om)
-% 15 février 2014
+% GUDHI - Porquerolles 2019
+% Vincent Rouvreau
+% 14 october 2019
 
-# Pourquoi ?
+# What's new
 
-## Parce que
+## GitHub
 
-- Le code source est lisible
-- Il est *git*able
-- Le résultat est le même que *Beamer*
+> - [GUDHI organization](https://github.com/GUDHI)
+    - gudhi-devel
+    - TDA-tutorial
+    - Web site
+> - [Issue tracker](https://github.com/GUDHI/gudhi-devel/issues)
+> - [Code reviews on pull requests](https://github.com/GUDHI/gudhi-devel/pulls)
 
-## Du code
+## MIT
 
-La coloration de code est très simple.
+> - GUDHI moved from a GPL v.3 license to MIT in order to ease the contributions.
+> - There are still GPLv3 and LGPL dependencies for many modules (Alpha complex, Bottleneck, ...).
 
-### Un Hello World!
 
-~~~java
-public static void main(String... args) {
-    System.out.println("Hello world!");
-}
+## Sparse Rips complex python version
+
+[https://gudhi.inria.fr/python/latest/rips_complex_user.html](https://gudhi.inria.fr/python/latest/rips_complex_user.html)
+
+~~~python
+import gudhi
+rips_complex = gudhi.RipsComplex(off_file='torus_3d.off',
+                                 sparse=0.3)
+simplex_tree = rips_complex.create_simplex_tree()
+simplex_tree.persistence()
 ~~~
 
-## Du code numéroté
+## Persistence density graphical tool (1/2)
 
-~~~{.c .numberLines startFrom="5"}
-int main(int argc, char *argv[]) {
-  printf("Hello world!\n");
-  return 0;
-}
+[https://www.nature.com/articles/ncomms15082](https://www.nature.com/articles/ncomms15082)
+
+~~~python
+import gudhi
+persistence_file='rips_on_tore3D_1307.pers'
+plt = gudhi.plot_persistence_density(
+    persistence_file=persistence_file,
+    max_intervals=0, dimension=1, legend=True)
+plt.show()
 ~~~
 
-## Des énumérations
+## Persistence density graphical tool (2/2)
 
-- Apache
-- BSD
-- GPL
-    - GPLv2
-    - GPLv3
-- MIT
-
-## Des listes numérotées
-
-1. Récupérer le projet
-2. Installer `pandoc`
-3. Installer les dépendances
-    a. `texlive-latex-base`
-    b. `latex-beamer`
-4. Installer un lecteur (`impressive`)
-5. `make run`
-
-## Des citations
-
-Celle-ci est de [*Mitch Resnick*](https://en.wikipedia.org/wiki/Mitchel_Resnick).
-
-> If you learn to read, you can then read to learn.\
-> If you learn to code, you can then code to learn.[^ted]
-
-[^ted]: \tiny http://www.ted.com/talks/mitch\_resnick\_let\_s\_teach\_kids\_to\_code.html
-
-## Des apparitions
-
-Par étapes :
-
-> - d'abord…
-> - ensuite…
-> - enfin…
-
-## D'autres apparitions
-
-D'abord un paragraphe…
-
-. . .
-
-Puis un autre
-
-*(ça ne marche pas avec pandoc 1.9.4.2, mais ça marche avec 1.12.2.1, vérifiez
-votre version)*
-
-## Mise en forme
-
-| Il y a 2 types de personnes :
-|   ceux qui comprennent la récursivité et
-|   ceux qui ne comprennent pas qu'il y a 2 types de personnes :
-|     ceux qui comprennent la récursivité et
-|     ceux qui ne comprennent pas qu'il y a 2 types de personnes :
-|       ceux qui comprennent la récursivité et
-|       ceux qui…
+![Persistence density graphical tool](http://gudhi.gforge.inria.fr/python/latest/_images/persistence_graphical_tools_user-3.png)
 
 
-# Spécial \LaTeX /Beamer
+# What's next
 
-## Du spécifique
+## Strong collapse
 
 Certaines choses n'existent pas nativement en *Pandoc Markdown*, il suffit donc
 d'utiliser du \LaTeX.
 
-## Des blocks spécifiques
+## sklearn-tda
 
 \begin{alertblock}{Alerte}
 Ceci est une alerte
@@ -106,7 +66,7 @@ Ceci est une alerte
 Ceci est un exemple
 \end{exampleblock}
 
-## Images
+## Wasserstein distance
 
 Les images sont supportées par *Markdown*, mais on ne peut pas spécifier la
 taille. Il est donc pratique d'utiliser directement \LaTeX.
@@ -115,7 +75,7 @@ taille. Il est donc pratique d'utiliser directement \LaTeX.
 
 \center\includegraphics[height=6.5cm]{croissance.jpg}
 
-## Des maths
+## Exact d-Alpha complex
 
 Avec des formules :
 
@@ -123,9 +83,9 @@ $$
 \frac{\pi}{4}=\int_0^1 \sqrt{1-x^2}\mathrm dx
 $$
 
-# À vous
+# Notebooks
 
-## Essayez
+## Notebooks
 
     sudo apt-get install pandoc \
                          texlive-latex-base \
@@ -137,7 +97,7 @@ $$
     cd mdbeamer
     make run
 
-## Adaptez
+## DTM-filtration
 
 ----------- ----------------------------
   la source \code{slides.md}
@@ -145,32 +105,9 @@ $$
    le thème \code{beamerthemeCustom.sty}
 ----------- ----------------------------
 
-## Un thème en 2 minutes
+# Benchmarks
 
-Définissez vos 3 couleurs :
-
-\scriptsize
-
-~~~latex
-\definecolor{Color1}{HTML}{25567B}
-\definecolor{Color2}{HTML}{033E6B}
-\definecolor{Color3}{HTML}{66A3D2}
-~~~
-
-\normalsize
-
-Changez les logos :
-
-\scriptsize
-
-~~~latex
-\titlegraphic{\includegraphics[height=1.5cm]{avatar.png}}
-\logo{\includegraphics[height=1.5cm]{gnulogo.png}}
-~~~
-
-# Voir aussi
-
-## Des liens
+## No threshold
 
 \scriptsize
 
