@@ -6,21 +6,21 @@
 
 ## GitHub
 
-> - [GUDHI organization](https://github.com/GUDHI)
-    - gudhi-devel
-    - TDA-tutorial
-    - Web site
+\vspace{-1.5cm}
+> - [GUDHI GitHub organization](https://github.com/GUDHI)
 > - [Issue tracker](https://github.com/GUDHI/gudhi-devel/issues)
 > - [Code reviews on pull requests](https://github.com/GUDHI/gudhi-devel/pulls)
 
 ## MIT
 
+\vspace{-1.5cm}
 > - GUDHI moved from a GPL v.3 license to MIT in order to ease the contributions.
 > - There are still GPLv3 and LGPL dependencies for many modules (Alpha complex, Bottleneck, ...).
 
 
 ## Sparse Rips complex python version
 
+\vspace{-1.5cm}
 [https://gudhi.inria.fr/python/latest/rips_complex_user.html](https://gudhi.inria.fr/python/latest/rips_complex_user.html)
 
 ~~~python
@@ -33,6 +33,7 @@ simplex_tree.persistence()
 
 ## Persistence density graphical tool (1/2)
 
+\vspace{-1.5cm}
 [https://www.nature.com/articles/ncomms15082](https://www.nature.com/articles/ncomms15082)
 
 ~~~python
@@ -44,76 +45,42 @@ plt = gudhi.plot_persistence_density(
 plt.show()
 ~~~
 
-## Persistence density graphical tool (2/2)
+----
 
-![Persistence density graphical tool](http://gudhi.gforge.inria.fr/python/latest/_images/persistence_graphical_tools_user-3.png)
-
+\vspace{-1.5cm}
+\center\includegraphics[height=5.5cm]{persistence_graphical_tools_user-3.png}
 
 # What's next
 
 ## Strong collapse
 
-Certaines choses n'existent pas nativement en *Pandoc Markdown*, il suffit donc
-d'utiliser du \LaTeX.
+\vspace{-1.5cm}
+\center\includegraphics[height=4.9cm]{strong_collapse.png}
+
 
 ## sklearn-tda
 
-\begin{alertblock}{Alerte}
-Ceci est une alerte
-\end{alertblock}
+\vspace{-1.5cm}
 
-\begin{exampleblock}{Exemple}
-Ceci est un exemple
-\end{exampleblock}
 
 ## Wasserstein distance
 
-Les images sont supportées par *Markdown*, mais on ne peut pas spécifier la
-taille. Il est donc pratique d'utiliser directement \LaTeX.
+\vspace{-1.5cm}
 
-----
-
-\center\includegraphics[height=6.5cm]{croissance.jpg}
 
 ## Exact d-Alpha complex
 
-Avec des formules :
+\vspace{-1.5cm}
 
-$$
-\frac{\pi}{4}=\int_0^1 \sqrt{1-x^2}\mathrm dx
-$$
 
 # Notebooks
 
 ## Notebooks
 
-    sudo apt-get install pandoc \
-                         texlive-latex-base \
-                         texlive-latex-extra \
-                         texlive-lang-french \
-                         latex-beamer \
-                         impressive
-    git clone http://git.rom1v.com/mdbeamer.git
-    cd mdbeamer
-    make run
-
-## DTM-filtration
-
------------ ----------------------------
-  la source \code{slides.md}
-
-   le thème \code{beamerthemeCustom.sty}
------------ ----------------------------
+\vspace{-1.5cm}
 
 # Benchmarks
 
 ## No threshold
 
-\scriptsize
-
-pandoc
-  ~ <http://johnmacfarlane.net/pandoc/demo/example9/pandocs-markdown.html>
-pour beamer
-  ~ <http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc.html>
-en français
-  ~ <http://enacit1.epfl.ch/markdown-pandoc/>
+\vspace{-1.5cm}
